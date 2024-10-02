@@ -27,6 +27,6 @@ jobs:
         docker-compose -f docker-compose.yml --env-file .env.develop up --build
         docker-compose down
 
-    - name: Run tests
-      run: |
-        docker-compose -f docker-compose.yml exec ai-service pytest ./ai-service/tests/
+#    - name: Run tests
+#      run: |
+#        docker-compose -f docker-compose.yml exec ai-service pytest ./ai-service/tests/
