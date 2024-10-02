@@ -3,15 +3,19 @@ services:
     build: ./ai-service
     ports:
       - "5000:5000"
-    environment:
-      - LANGCHAIN_API_KEY=your_api_key_here
+    env_file:
+      - .env.${ENV}
 
   log-watcher:
     build: ./log-watcher
     ports:
       - "5001:5001"
+    env_file:
+      - .env.${ENV}
 
   ci-cd-automation:
     build: ./devops-watchdog
     ports:
       - "5002:5002"
+    env_file:
+      - .env.${ENV}
