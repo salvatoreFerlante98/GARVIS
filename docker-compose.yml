@@ -1,5 +1,7 @@
 services:
   ai-service:
+    environment:
+      - ENV=${ENV:-develop}
     build: ./ai-service
     ports:
       - "5000:5000"
@@ -7,6 +9,8 @@ services:
       - .env.${ENV}
 
   log-watcher:
+    environment:
+      - ENV=${ENV:-develop}
     build: ./log-watcher
     ports:
       - "5001:5001"
@@ -14,6 +18,8 @@ services:
       - .env.${ENV}
 
   ci-cd-automation:
+    environment:
+      - ENV=${ENV:-develop}
     build: ./devops-watchdog
     ports:
       - "5002:5002"
