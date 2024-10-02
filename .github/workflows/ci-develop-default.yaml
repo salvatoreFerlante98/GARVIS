@@ -24,7 +24,7 @@ jobs:
 
     - name: Build Docker containers
       run: |
-        docker-compose -f docker-compose.yml --env-file .env.develop up --build
+        ENV=develop docker-compose -f docker-compose.yml --env-file .env.develop up --build
         docker-compose down
 
     - name: Run tests
