@@ -19,7 +19,7 @@ update_repo() {
 
 deploy_containers() {
     echo -e "${GREEN}Building and running Docker containers...${NC}"
-    docker-compose -f docker-compose.yml --env-file .env.develop up --build -d
+    ENV=develop docker-compose -f docker-compose.yml --env-file .env.develop up --build -d
     if [ $? -eq 0 ]; then
         echo -e "${GREEN}Successfully started containers.${NC}"
     else
