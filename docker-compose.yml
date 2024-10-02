@@ -1,21 +1,17 @@
 services:
   ai-service:
-    environment:
-      - ENV=${ENV:-develop}
     build: ./ai-service
     ports:
       - "5000:5000"
     env_file:
-      - .env.${ENV}
+      - .env.develop
 
   log-watcher:
-    environment:
-      - ENV=${ENV:-develop}
     build: ./log-watcher
     ports:
       - "5001:5001"
     env_file:
-      - .env.${ENV}
+      - .env.develop
 
   ci-cd-automation:
     environment:
@@ -24,4 +20,4 @@ services:
     ports:
       - "5002:5002"
     env_file:
-      - .env.${ENV}
+      - .env.develop
