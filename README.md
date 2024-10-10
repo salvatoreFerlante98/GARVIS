@@ -29,27 +29,27 @@
 ### **Steps to Install and Run**
 
 1. **Clone the Repository**:
-   \`\`\`bash
+   ```bash
    git clone https://github.com/your-username/garvis.git
    cd garvis
-   \`\`\`
+   ```
 
 2. **Run the Deploy Script**:
-   GARVIS can be deployed using the \`deploy.sh\` script, which will automatically pull the latest code, build the Docker containers, and start the services.
-   \`\`\`bash
+   GARVIS can be deployed using the `deploy.sh` script, which will automatically pull the latest code, build the Docker containers, and start the services.
+   ```bash
    ./deploy.sh
-   \`\`\`
+   ```
 
 3. **Access the Services**:
-   - AI Service: \`http://localhost:5000\`
-   - Log Watcher: \`http://localhost:5001\`
-   - CI/CD Automation: \`http://localhost:5002\`
+   - AI Service: `http://localhost:5000`
+   - Log Watcher: `http://localhost:5001`
+   - CI/CD Automation: `http://localhost:5002`
 
 4. **Monitor Containers**:
    To check the status of running containers, use the following command:
-   \`\`\`bash
+   ```bash
    docker ps
-   \`\`\`
+   ```
 
 ## **Usage**
 
@@ -61,16 +61,16 @@ Once GARVIS is integrated with Google Assistant, you can issue voice commands su
 
 ### **Automated Deployments**
 The deployment is fully automated via CI/CD pipelines:
-- Each push to the \`develop\` branch triggers the Continuous Integration (CI) pipeline, building and testing the containers.
+- Each push to the `develop` branch triggers the Continuous Integration (CI) pipeline, building and testing the containers.
 - After a successful CI run, the Continuous Deployment (CD) pipeline is triggered to update the running services.
 
 ## **Contributing**
 
 We welcome contributions to enhance the features and capabilities of GARVIS. Please follow the guidelines below:
 1. Fork the repository.
-2. Create a feature branch (\`git checkout -b feature-branch\`).
-3. Commit your changes (\`git commit -m "Add feature"\`).
-4. Push to the branch (\`git push origin feature-branch\`).
+2. Create a feature branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -m "Add feature"`).
+4. Push to the branch (`git push origin feature-branch`).
 5. Create a Pull Request.
 
 ## **License**
